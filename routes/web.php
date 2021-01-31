@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('/', "App\Http\Controllers\UsersController@index");
-Route::get('create',"App\Http\Controllers\UsersController@create");
+Route::get('users/create',"App\Http\Controllers\UsersController@create");
 
 Route::post('/user', "App\Http\Controllers\UsersController@store");
 

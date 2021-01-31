@@ -10,7 +10,7 @@ class AddressesController extends Controller
     public function index()
     {
       $address = Address::all();
-       return view('home', compact('addresses'));
+       return view('', compact('addresses'));
     }
     public function show(Address $address)
     {
