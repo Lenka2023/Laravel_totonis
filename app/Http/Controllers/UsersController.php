@@ -14,7 +14,7 @@ class UsersController extends Controller
       $addresses = Address::all();
        return view('index', ['user'=>$users, 'address'=>$addresses]);
     }
-    public function show(User $user)
+    public function show(User $user, Address $address)
     {
     	 $users = User::all();
       $addresses = Address::all();

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Address;
+use App\Models\User;
+use App\Models\Address;
 class AddressesController extends Controller
 {
     public function index()
@@ -17,10 +18,11 @@ class AddressesController extends Controller
     	//$post= Post::find($id);
         return view('show', compact('address'));
     }
-    public function create()
+     public function create()
     {
-    	
-        return view("create");
+     $users = User::all();
+      $addresses = Address::all();  
+        return view("create", ['user'=>$users, 'address'=>$addresses]);
     }
 	 public function store()
     {
@@ -49,7 +51,7 @@ $address->City=$request->input('City');
 $address->Street=$request->input('Street');
 $address->Housenum=$request->input('Housenum');
 $address->Officenum=$request->input('Officenum');
-        return view("edit", 'address'=>$address);
+        return view("edit");
     }
      public function update(Address $address)
     {

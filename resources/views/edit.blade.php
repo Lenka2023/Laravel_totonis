@@ -6,7 +6,7 @@
        
                   
                     
-                      <form method="POST" action="{{ route('/user') }}">
+                      <form method="POST" action="/users/{{$user->id}}">
                         @csrf
                          <div class="form-group row">
                             <label for="login" class="col-md-4 col-form-label text-md-right">{{ __('login') }}</label>
