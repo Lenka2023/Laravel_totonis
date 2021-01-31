@@ -4,26 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\User;
-use App\Address;
-class UserController extends Controller
+use App\Models\User;
+use App\Models\Address;
+class UsersController extends Controller
 {
     public function index()
     {
       $users = User::all();
-       return view('show', compact('users'));
+      $addresses = Address::all();
+       return view('index', ['user'=>$users, 'address'=>$addresses]);
     }
     public function show(User $user)
     {
-    	//$post= Post::find($id);
-        return view('show', compact('user'));
+    	 $users = User::all();
+      $addresses = Address::all();
+        return view('show', ['user'=>$user, 'address'=>$address]);
     }
     public function create()
     {
-    	
-        return view("create");
+     $users = User::all();
+      $addresses = Address::all();	
+        return view("create", ['user'=>$users, 'address'=>$addresses]);
     }
-	 public function store()
+	 public function store(request $request)
     {
         //dd("store");
         $this->validate(request(), [
@@ -51,7 +54,7 @@ $user->lname=$request->input('lname');
 $user->date=$request->input('date');
 $user->email=$request->input('email');
 $user->password=$request->input('password');
-        return view("edit", 'user'=>$user);
+        return view("edit");
     }
      public function update(User $user)
     {
