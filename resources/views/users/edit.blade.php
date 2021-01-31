@@ -12,7 +12,7 @@
                             <label for="login" class="col-md-4 col-form-label text-md-right">{{ __('login') }}</label>
 
                             <div class="col-md-6">
-                                <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="name" autofocus>
+                                <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{{$user->login}}}" required autocomplete="name" autofocus>
 
                                 @error('login')
                                     <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@
                             <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('fname') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fname" type="text" class="form-control @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="name" autofocus>
+                                <input id="fname" type="text" class="form-control @error('fname') is-invalid @enderror" name="fname" value="{{{$user->fname}}}" required autocomplete="name" autofocus>
 
                                 @error('fname')
                                     <span class="invalid-feedback" role="alert">
@@ -40,7 +40,7 @@
                             <label for="lname" class="col-md-4 col-form-label text-md-right">{{ __('lname') }}</label>
 
                             <div class="col-md-6">
-                                <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="name" autofocus>
+                                <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{{$user->name}}}" required autocomplete="name" autofocus>
 
                                 @error('lname')
                                     <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                             <label for="date" class="col-md-4 col-form-label text-md-right">{{ __('date') }}</label>
 
                             <div class="col-md-6">
-                                <input id="date" type="text" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" required autocomplete="name" autofocus>
+                                <input id="date" type="text" class="form-control @error('date') is-invalid @enderror" name="date" value="{{{$user->date}}}" required autocomplete="name" autofocus>
 
                                 @error('date')
                                     <span class="invalid-feedback" role="alert">
@@ -68,7 +68,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('email') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="name" autofocus>
+                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{{$user->email}}}" required autocomplete="name" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -81,7 +81,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="text" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="name" autofocus>
+                                <input id="password" type="text" class="form-control @error('password') is-invalid @enderror" name="password" value="{{{$user->password}}}" required autocomplete="name" autofocus>
 
 
                                 @error('password')
@@ -109,7 +109,7 @@
                             <label for="Index_addr" class="col-md-4 col-form-label text-md-right">{{ __('Index_addr') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Index_addr" type="text" class="form-control @error('Index_addr') is-invalid @enderror" name="Index_addr" value="{{ old('Index_addr') }}" required autocomplete="name" autofocus>
+                                <input id="Index_addr" type="text" class="form-control @error('Index_addr') is-invalid @enderror" name="Index_addr" value="{{{$user->Index_addr}}}" required autocomplete="name" autofocus>
 
                                 @error('Index_addr')
                                     <span class="invalid-feedback" role="alert">
@@ -123,7 +123,7 @@
                             <label for="Country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Country" type="text" class="form-control @error('Country') is-invalid @enderror" name="Country" value="{{ old('Country') }}" required autocomplete="name" autofocus>
+                                <input id="Country" type="text" class="form-control @error('Country') is-invalid @enderror" name="Country" value="{{{$user->Country}}}" required autocomplete="name" autofocus>
 
                                 @error('Country')
                                     <span class="invalid-feedback" role="alert">
@@ -137,7 +137,7 @@
                             <label for="Housenum" class="col-md-4 col-form-label text-md-right">{{ __('Housenum') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Housenum" type="text" class="form-control @error('Housenum') is-invalid @enderror" name="Housenum" value="{{ old('Housenum') }}" required autocomplete="name" autofocus>
+                                <input id="Housenum" type="text" class="form-control @error('Housenum') is-invalid @enderror" name="Housenum" value="{{{$user->Housenum}}}" required autocomplete="name" autofocus>
 
                                 @error('Housenum')
                                     <span class="invalid-feedback" role="alert">
@@ -151,7 +151,7 @@
                             <label for="City" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
 
                             <div class="col-md-6">
-                                <input id="City" type="text" class="form-control @error('City') is-invalid @enderror" name="City" value="{{ old('City') }}" required autocomplete="name" autofocus>
+                                <input id="City" type="text" class="form-control @error('City') is-invalid @enderror" name="City" value="{{{$user->City}}}" required autocomplete="name" autofocus>
 
                                 @error('City')
                                     <span class="invalid-feedback" role="alert">
@@ -165,7 +165,7 @@
                             <label for="Street" class="col-md-4 col-form-label text-md-right">{{ __('Street') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Street" type="text" class="form-control @error('Street') is-invalid @enderror" name="Street" value="{{ old('Street') }}" required autocomplete="name" autofocus>
+                                <input id="Street" type="text" class="form-control @error('Street') is-invalid @enderror" name="Street" value="{{{$user->Street}}}" required autocomplete="name" autofocus>
 
                                 @error('Street')
                                     <span class="invalid-feedback" role="alert">
@@ -178,7 +178,7 @@
                             <label for="Officenum" class="col-md-4 col-form-label text-md-right">{{ __('Officenum') }}</label>
 
                            <div class="col-md-6">
-                                <input id="Officenum" type="text" class="form-control @error('Officenum') is-invalid @enderror" name="Officenum" value="{{ old('Officenum') }}" required autocomplete="name" autofocus> 
+                                <input id="Officenum" type="text" class="form-control @error('Officenum') is-invalid @enderror" name="Officenum" value="{{{$user->Officenum}}}" required autocomplete="name" autofocus> 
 
                                 @error('Officenum')
                                     <span class="invalid-feedback" role="alert">
